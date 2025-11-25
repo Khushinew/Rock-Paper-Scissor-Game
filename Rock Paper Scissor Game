@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Game</title></head>
+    <style>
+        .rock button{
+            
+            margin-right:130px;
+            margin-left:130px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap:50px;
+         }
+         .body{
+            background-color:#deffff;
+         }
+
+    </style>
+    <body class="body">
+        <h1 style="display:flex;justify-content:center;font-size:40px"><i><u>Rock  Paper  Scissor</u></i></h1>
+        <br><br><br><br><br>
+        <div class="rock">
+            <button onclick="myfunction1()" style="border:5px solid black;"><img src="https://sihoonathan.github.io/rock-paper-scissors/assets/img/rock2.png" width="200" height="200"></button>
+            <button  onclick="myfunction2();" style="border:5px solid black;"><img src="https://rock-paper-scissors-lilac-alpha.vercel.app/static/media/paper.png" width="200" height="200"></button>
+            <button onclick="myfunction3();" style="border:5px solid black;"><img src="https://i.pinimg.com/474x/67/eb/fd/67ebfd32e898b4ec3ae4e59ae33832c8.jpg" width="200" height="200"></button>
+        </div>
+        <script>
+            function common(){
+                computerMove=Math.random();
+            if(computerMove>= 0 && computerMove<1/3){
+                computerMove='Rock';
+                
+            }
+            else if(computerMove>=1/3 && computerMove<2/3){
+                computerMove='Paper';
+                
+            }
+            else if(computerMove<=2/3 && computerMove<1){
+                computerMove='Scissors';
+                
+            }
+
+            }
+         function myfunction1(){
+           
+                common();
+            
+                if(computerMove==="Rock"){
+                    console.log(`Computers Move: ${computerMove}`);
+                    alert("Its a Tie\n\n"+"Your Move: Rock\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+                else if(computerMove=== "Scissors"){
+                    console.log(`Computers Move: ${computerMove}`);
+                    alert("You Win\n\n"+"Your Move: Rock\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+                else if(computerMove=== "Paper"){
+                    console.log(`Computers Move: ${computerMove}`);
+                    alert("You Lose\n\n"+"Your Move: Rock\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+         }
+
+         function myfunction2(){
+                common();
+            
+                if(computerMove==="Rock"){
+                    console.log(`ComputersMove: ${computerMove}`);
+                    alert("You Win\n\n"+"Your Move: Paper\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+                else if(computerMove=== "Scissors"){
+                    console.log(`ComputersMove: ${computerMove}`);
+                    alert("You Lose\n\n"+"Your Move: Paper\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+                else if(computerMove=== "Paper"){
+                    console.log(`ComputersMove: ${computerMove}`);
+                    alert("Its a Tie\n\n"+"Your Move: Paper\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+
+         }
+
+         function myfunction3(){
+           
+                common();
+                if(computerMove==="Rock"){
+                    console.log(`ComputersMove: ${computerMove}`);
+                    alert("You Lose\n\n"+"Your Move: Scissors\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+                else if(computerMove=== "Scissors"){
+                    console.log(`ComputersMove: ${computerMove}`);
+                    alert("Its a Tie\n\n"+"Your Move: Scissors\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+                else if(computerMove=== "Paper"){
+                    console.log(`ComputersMove: ${computerMove}`);
+                    alert("You Win\n\n"+"Your Move: Scissors\n"+`Computers Move: ${computerMove}`);
+                    
+                }
+
+         }
+
+
+
+
+        </script>
+    </body>
+</html>
