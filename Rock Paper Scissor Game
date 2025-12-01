@@ -35,7 +35,7 @@
                 computerMove='Paper';
                 
             }
-            else if(computerMove<=2/3 && computerMove<1){
+            else if(computerMove>=2/3 && computerMove<1){
                 computerMove='Scissors';
                 
             }
